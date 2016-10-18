@@ -1,4 +1,9 @@
-# Version 1.3.0
+# Version 1.3.0a
+## Changelog
+### 1.3.0a
+* code formatted
+* mAh target steps increased from 1 to 50
+* added VFAS voltage from gregorg/KISS_Battery_Monitor
 
 # KISS_Battery_Monitor
 Open TX Telemetry Script for reading and announcing battery mAh consumption.  Uses the mAh consumption as reported from KISS 24a ESC as Telemetry data and accepts a configurable user Target mAH and Percentage Notification.  The pilot can target how much mAh they intend to use that flight, adjust this value as needed, and this will be used as the "Battery".  The Percentage Notification allow for the pilot to receive verbal indication of the "Battery" at the desired intervals.  During the final 10% of the "Battery" an indication is given at every 1%.   After 100% usage of the "Battery" each additional % used will trigger a "Battery Critical" alarm.
