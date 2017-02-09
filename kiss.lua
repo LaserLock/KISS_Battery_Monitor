@@ -1,12 +1,12 @@
-local versionInfo = "KISS Telemetry Data - v1.3.0a"
+local versionInfo = "KISS TLM v1.3.0b"
 
 local blnMenuMode = 0
 
 -- mahTarget is used to set our target mah consumption and mahAlertPerc is used for division of alerts
-local mahTarget = 1200
+local mahTarget = 1250
 local mahAlertPerc = 10
 
--- OpenTX 2.0 - Percent Unit = 8 // OpenTx 2.1 - Percent Unit = 13
+-- OpenTX 2.0 - Percent Unit = 8 // OpenTx 2.1/2.2 - Percent Unit = 13
 -- see: https://opentx.gitbooks.io/opentx-lua-reference-guide/content/general/playNumber.html
 local percentUnit = 13
 

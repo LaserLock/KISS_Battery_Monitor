@@ -1,5 +1,6 @@
 *
 !.gitignore
-!KISSdata.lua
+!kiss.lua
 
-!*/
+!sounds/*
+!DOCS/*

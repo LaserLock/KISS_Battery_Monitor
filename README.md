@@ -1,5 +1,10 @@
-# Version 1.3.0a
+# Version 1.3.0b
+
 ## Changelog
+
+### 1.3.0b
+* renamed to match OpenTX 2.2 requirements
+
 ### 1.3.0a
 * code formatted
 * mAh target steps increased from 1 to 50
@@ -14,10 +19,10 @@ See the WIKI for more detailed information and screenshots on installation, and 
 
 # REQUIREMENTS
 * KISS 24a ESC
-* OPEN TX 2.1 Firmware on Taranis
+* OPEN TX 2.1/2.2 Firmware on Taranis
 
 # INSTALLATION:
-Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (KISSdata.lua) in the following directory on the SD_CARD of your Taranis.
+Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (kiss.lua) in the following directory on the SD_CARD of your Taranis.
 ``` SCRIPTS\TELEMETRY```  (if the TELEMETRY folder does not exist then you may need to create it).  
 
 ADDITIONAL STEPS FOR SOME USERS
