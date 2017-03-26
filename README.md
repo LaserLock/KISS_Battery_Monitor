@@ -1,4 +1,9 @@
-# Version 1.3.1
+# Version 1.3.2
+
+#LATEST UPDATES
+1.3.2 - adds qx7 support
+1.3.1 - adds opentx 2.2 support
+
 
 # KISS_Battery_Monitor
 Open TX Telemetry Script for reading and announcing battery mAh consumption.  Uses the mAh consumption as reported from KISS 24a ESC as Telemetry data and accepts a configurable user Target mAH and Percentage Notification.  The pilot can target how much mAh they intend to use that flight, adjust this value as needed, and this will be used as the "Battery".  The Percentage Notification allow for the pilot to receive verbal indication of the "Battery" at the desired intervals.  During the final 10% of the "Battery" an indication is given at every 1%.   After 100% usage of the "Battery" each additional % used will trigger a "Battery Critical" alarm.
@@ -12,7 +17,7 @@ See the WIKI for more detailed information and screenshots on installation, and 
 * OPEN TX 2.1 Firmware on Taranis
 
 # INSTALLATION:
-Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (KISS.lua) in the following directory on the SD_CARD of your Taranis.
+Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (KISS.lua) or (KISSQ7.lua for Qx7 users) in the following directory on the SD_CARD of your Taranis.
 ``` SCRIPTS\TELEMETRY```  (if the TELEMETRY folder does not exist then you may need to create it).  
 
 ADDITIONAL STEPS FOR SOME USERS
