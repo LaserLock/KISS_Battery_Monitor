@@ -1,6 +1,6 @@
 # Version 1.3.2
 
-#LATEST UPDATES
+# LATEST UPDATES
 1.3.2 - adds qx7 support
 1.3.1 - adds opentx 2.2 support
 
