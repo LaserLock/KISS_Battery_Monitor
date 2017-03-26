@@ -2,7 +2,6 @@
 
 # LATEST UPDATES
 1.3.2 - adds qx7 support
-1.3.1 - adds opentx 2.2 support
 
 
 # KISS_Battery_Monitor
