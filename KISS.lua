@@ -1,4 +1,4 @@
-local versionInfo = "KISS TLM v1.3.0b"
+local versionInfo = "KISS TLM v1.3.1"
 
 local blnMenuMode = 0
 
@@ -38,10 +38,11 @@ data.volts = getTelemetryId("VFAS")
 -- Rounding Function
 local function round(val, decimal)
     local exp = decimal and 10 ^ decimal or 1
+
     return math.ceil(val * exp - 0.5) / exp
 end
 
---- MahAlert and Logging of last Value Played
+-- MahAlert and Logging of last Value Played
 local function playMahPerc(percVal)
     playNumber(percVal, percentUnit)
     lastMahAlert = percVal -- Set our lastMahAlert
@@ -74,6 +75,7 @@ end
 
 local function drawAlerts()
     percVal = 0
+
     -- Added to fix mah reseting to Zero on battery disconnects
     tmpMah = getValue(data.fuelUsed)
 
@@ -85,7 +87,6 @@ local function drawAlerts()
 
     -- The display of MAH data is now pulled from the lastKnownMah var which will only
     -- be reset on Telemetry reset now.
-
     percVal = round(((lastKnownMah / mahTarget) * 100), 0)
     lcd.drawText(5, 10, "USED: " .. lastKnownMah .. "mah", MIDSIZE)
     lcd.drawText(90, 30, percVal .. " %", MIDSIZE)
@@ -121,10 +122,8 @@ end
 -- outside of this run_func
 ----------------------------------------------------------------
 local function run_func(event)
-
     if blnMenuMode == 1 then
         --We are in our menu mode
-
         if event == 32 then
             --Take us out of menu mode
             blnMenuMode = 0
@@ -157,9 +156,7 @@ local function run_func(event)
         lcd.drawText(66, 35, "Use +/- to change", SMLSIZE)
 
         lcd.drawText(60, 55, "Press [MENU] to return", SMLSIZE)
-
     else
-
         if event == 32 then
             --Put us in menu mode
             blnMenuMode = 1
@@ -188,7 +185,8 @@ local function run_func(event)
         lcd.drawScreenTitle(versionInfo, 1, 2)
 
         lcd.drawGauge(6, 25, 70, 20, percVal, 100)
-        lcd.drawText(130, 10, "Target mAh : " .. mahTarget, SMLSIZE)
+        lcd.drawText(130, 10, "Target mAh : ", MIDSIZE)
+        lcd.drawText(160, 25, mahTarget, MIDSIZE)
         lcd.drawText(130, 40, "Use +/- to change", SMLSIZE)
 
         lcd.drawText(30, 55, "Press [MENU] for more options", SMLSIZE)
@@ -197,7 +195,5 @@ local function run_func(event)
         doMahAlert()
     end
 end
-
---------------------------------
 
 return { run = run_func, background = bg_func, init = init_func }

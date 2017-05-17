@@ -1,14 +1,7 @@
-# Version 1.3.0b
+# Version 1.3.2
 
-## Changelog
-
-### 1.3.0b
-* renamed to match OpenTX 2.2 requirements
-
-### 1.3.0a
-* code formatted
-* mAh target steps increased from 1 to 50
-* added VFAS voltage from gregorg/KISS_Battery_Monitor
+# LATEST UPDATES
+1.3.2 - adds qx7 support
 
 # KISS_Battery_Monitor
 Open TX Telemetry Script for reading and announcing battery mAh consumption.  Uses the mAh consumption as reported from KISS 24a ESC as Telemetry data and accepts a configurable user Target mAH and Percentage Notification.  The pilot can target how much mAh they intend to use that flight, adjust this value as needed, and this will be used as the "Battery".  The Percentage Notification allow for the pilot to receive verbal indication of the "Battery" at the desired intervals.  During the final 10% of the "Battery" an indication is given at every 1%.   After 100% usage of the "Battery" each additional % used will trigger a "Battery Critical" alarm.
@@ -22,7 +15,8 @@ See the WIKI for more detailed information and screenshots on installation, and 
 * OPEN TX 2.1/2.2 Firmware on Taranis
 
 # INSTALLATION:
-Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (kiss.lua) in the following directory on the SD_CARD of your Taranis.
+Download the latest release from the https://github.com/DynamikArray/KISS_Battery_Monitor/releases and place the file (KISS.lua) or (KISSQ7.lua for Qx7 users) in the following directory on the SD_CARD of your Taranis.
+
 ``` SCRIPTS\TELEMETRY```  (if the TELEMETRY folder does not exist then you may need to create it).  
 
 ADDITIONAL STEPS FOR SOME USERS
@@ -42,5 +36,6 @@ On the main screen of the script, you may adjust the target mAh at anytime using
 
 Percentages Notification adjust may be accessed by pressing the [MENU] key.  On the Percentages Notification Screen you may adjust the Percentage using the +/- keys.  Pressing the [MENU] key again will bring you back to the main screen of this script.
 
-# Known Issues
+# KNOWN ISSUES
+- OpenTx2.2 imposed a 6 Charachter limit on the filename, so the .lua file needs to be renamed  - fixed in v.1.3.1
 - The Telemetry data is not visible for viewing after RSSI loss (ie pilot lands and disconnects battery from multi rotor) - fixed in v.1.3.0 
