@@ -1,6 +1,8 @@
 *
 !.gitignore
-!kiss.lua
+!KISS.lua
+!KISSQ7.lua
+!README.md
 
 !sounds/*
 !DOCS/*
